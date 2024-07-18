@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Counter from "@/components/Counter";
 import Card from "@/components/Card";
+import Footer from "@/components/Footer";
 export default function Component() {
   return (
     <ThemeProvider attribute="class">
@@ -192,6 +193,37 @@ export default function Component() {
           />
         </div>
       </section>
+      <section className="flex flex-col items-center gap-6 bg-[#F5F7FA] dark:bg-inherit mb-5">
+        <p className="  md:text-[50px] font-bold w-full  md:w-[40%] text-center">
+          Pellentesque suscipit fringilla libero eu.
+        </p>
+        <Button
+          asChild
+          className="bg-green-600 hover:bg-green-500 px-18px py-6"
+        >
+          <Link href="/login">
+            {" "}
+            <p className=" flex items-center gap-2 dark:text-white">
+              Get a Demo
+              <svg
+                width="20"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="#ffffff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 16.399L19.2929 13.1062C19.6834 12.7156 19.6834 12.0825 19.2929 11.6919L16 8.39905M19 12.399L5 12.399"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </p>
+          </Link>
+        </Button>
+      </section>
+      <Footer />
     </ThemeProvider>
   );
 }
